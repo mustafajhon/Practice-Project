@@ -25,7 +25,11 @@ class Counter extends Component {
           <button className="btn btn-danger" onClick={this.Resetpwd}>
             ChangeState
           </button>
-          <button className=" one btn btn-danger" onClick={this.Alert}>
+          <button
+            onMouseOver={this.Prompt}
+            className=" one btn btn-danger"
+            onClick={this.Alert}
+          >
             Alerbtn
           </button>
         </div>
@@ -35,6 +39,11 @@ class Counter extends Component {
       </>
     );
   }
+
+  Prompt = () => {
+    let prompt = window.prompt("Write Down Your Name: ");
+    console.log(prompt);
+  };
 
   Alert = () => {
     window.alert("Nice Shot");
